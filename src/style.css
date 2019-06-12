@@ -10,7 +10,16 @@ body {
 
 body {
   background: #FCFD54;
+  font-size: 1.1em;
+  line-height: 135%;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #000;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 p {
