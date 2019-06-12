@@ -77,10 +77,9 @@ canvas:active {
 }
 
 .Texts {
-  top: 900px;
   width: 900px;
   position: relative;
-  margin: 120px auto 200px auto;
+  margin: 1050px auto 500px auto;
 }
 
 .Texts__content {
