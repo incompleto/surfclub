@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  background: #faff00;
+  background: #FCFD54;
   position: relative;
 }
 
@@ -33,28 +33,42 @@ canvas:active {
   cursor: grabbing;
 }
 
-
 .is-fixed {
   position: fixed;
   top: 50%;
   left: 50%;
 }
 
+.Title {
+  width: 1000px;
+  height: 90px;
+  background-image: url(/img/title.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 500ms ease-in-out;
+}
+.is-hidden {
+  opacity: 0;
+}
 .Circle {
   position: relative;
   width: 250px;
   height: 500px;
   margin-top: 0;
   float: right;
-  shape-outside: url(left.svg);
+  shape-outside: url(/img/left.svg);
 }
 
 .Text:last-child .Circle {
   float: left;
-  shape-outside: url(right.svg);
+  shape-outside: url(/img/right.svg);
 }
 
 .Texts {
+  top: 900px;
   width: 900px;
   position: relative;
   margin: 120px auto 200px auto;

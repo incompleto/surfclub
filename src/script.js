@@ -80,7 +80,6 @@ wrinkle.copyGraph({
 });
 
 function animate() {
-  // illo.rotate.x = 0;
   illo.updateRenderGraph();
   requestAnimationFrame(animate);
 }
@@ -88,11 +87,18 @@ function animate() {
 animate();
 
 let $circles = document.querySelectorAll('.js-circle')
+let $title = document.querySelector('.js-title')
 
-window.addEventListener('scroll', function(e) {
+window.addEventListener('scroll', ()  => {
   let height = document.body.getBoundingClientRect().height
   let top = document.body.getBoundingClientRect().y
-  let y = window.scrollY + 30 
+  let y = window.scrollY - 920
+
+  if (window.scrollY > 650) {
+    $title.classList.add('is-hidden')
+  } else {
+    $title.classList.remove('is-hidden')
+  }
 
   $circles[0].style.marginTop = `${y}px`;
   $circles[1].style.marginTop = `${y}px`;
