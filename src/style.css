@@ -69,11 +69,13 @@ canvas:active {
   margin-top: 0;
   float: right;
   shape-outside: url(/img/left.svg);
+  -webkit-shape-outside: ellipse(130px 300px at 50% 70%);
 }
 
 .Text:last-child .Circle {
   float: left;
   shape-outside: url(/img/right.svg);
+  -webkit-shape-outside: ellipse(130px 300px at 50% 70%);
 }
 
 .Texts {
