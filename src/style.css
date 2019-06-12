@@ -35,7 +35,7 @@ canvas {
   left: 50%;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(.8);
   z-index: 100;
 }
 
