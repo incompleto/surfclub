@@ -69,14 +69,13 @@ canvas:active {
 
 .Text {
   font-family: 'Montserrat Alternates', sans-serif;
-  /*font-weight: 700;*/
+  font-weight: 700;
   font-size: 1.2em;
   text-align: right;
   margin-right: 10px;
 }
 .Text:last-child {
   text-align: left;
-  color: red;
   margin-left: 10px;
 }
 .Text strong {
