@@ -20,6 +20,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
+  padding-bottom: 700px;
 }
 
 p {
@@ -81,7 +82,7 @@ canvas:active {
 .Texts {
   width: 900px;
   position: relative;
-  margin: 1050px auto 500px auto;
+  margin: 1050px auto 0 auto;
 }
 
 .Texts__content {

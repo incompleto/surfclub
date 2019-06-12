@@ -94,7 +94,7 @@ window.addEventListener('scroll', ()  => {
   let top = document.body.getBoundingClientRect().y
   let y = window.scrollY - 920
 
-  if (window.scrollY > 650) {
+  if (window.scrollY > 650 && window.scrollY < 1400) {
     $title.classList.add('is-hidden')
   } else {
     $title.classList.remove('is-hidden')
