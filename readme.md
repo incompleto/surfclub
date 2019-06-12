@@ -10,4 +10,5 @@ Like surfing but on the Internet.
 
 ## Deploy
 
-Just run `npm build`
+1. Run `npm build`
+2. Commit changes
