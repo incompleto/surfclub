@@ -92,7 +92,7 @@ let $circles = document.querySelectorAll('.js-circle')
 window.addEventListener('scroll', function(e) {
   let height = document.body.getBoundingClientRect().height
   let top = document.body.getBoundingClientRect().y
-  let y = window.scrollY - 650 
+  let y = window.scrollY + 30 
 
   $circles[0].style.marginTop = `${y}px`;
   $circles[1].style.marginTop = `${y}px`;

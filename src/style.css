@@ -49,7 +49,7 @@ canvas:active {
 .Texts {
   width: 800px;
   position: relative;
-  margin: 800px auto;
+  margin: 120px auto 200px auto;
 }
 
 .Texts__content {
