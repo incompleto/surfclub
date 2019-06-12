@@ -92,7 +92,7 @@ let $title = document.querySelector('.js-title')
 window.addEventListener('scroll', ()  => {
   let height = document.body.getBoundingClientRect().height
   let top = document.body.getBoundingClientRect().y
-  let y = window.scrollY - 920
+  let y = window.scrollY - 615
 
   if (window.scrollY > 650 && window.scrollY < 1400) {
     $title.classList.add('is-hidden')

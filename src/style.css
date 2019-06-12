@@ -20,11 +20,11 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  padding-bottom: 700px;
+  padding-top: 800px;
+  padding-bottom: 800px;
 }
 
 p {
-  margin: 0;
   padding: 0;
   margin: 0 0 36px;
 }
@@ -36,6 +36,7 @@ canvas {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%) scale(.8);
+  transition: transform 500ms ease-in-out;
   z-index: 100;
 }
 
@@ -54,22 +55,24 @@ canvas:active {
   height: 90px;
   background-image: url(/img/title.svg);
   background-size: contain;
+ background-position: center center;
   background-repeat: no-repeat;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out, width 500ms ease-in-out;
 }
 .is-hidden {
   opacity: 0;
 }
 .Circle {
   position: relative;
-  width: 250px;
-  height: 500px;
+  width: 350px;
+  height: 350px;
   margin-top: 0;
   float: right;
   shape-outside: circle(50% at 100% 50%) padding-box;
+  transition: width 500ms ease-in-out, height 500ms ease-in-out;
 }
 
 .Text:last-child .Circle {
@@ -80,7 +83,8 @@ canvas:active {
 .Texts {
   width: 900px;
   position: relative;
-  margin: 1050px auto 0 auto;
+  margin: 0 auto 0 auto;
+  transition: width 500ms ease-in-out;
 }
 
 .Texts__content {
@@ -103,4 +107,33 @@ canvas:active {
 }
 .Text strong {
   font-weight: 900;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  canvas {
+    transform: translate(-50%, -50%) scale(.7);
+  }
+  .Texts,
+  .Title {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  canvas {
+    transform: translate(-50%, -50%) scale(.5);
+    margin-top: -50px;
+  }
+  .Texts {
+    width: 90%;
+  }
+  .Title {
+    width: 90%;
+    margin-top: -50px;
+  }
+  .Circle {
+    width: 250px;
+    height: 250px;
+  }
 }
