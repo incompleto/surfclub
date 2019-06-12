@@ -18,8 +18,55 @@ canvas {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 100;
 }
 
 canvas:active {
   cursor: grabbing;
+}
+
+
+.is-fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.Circle {
+  position: relative;
+  width: 250px;
+  height: 500px;
+  margin-top: 0;
+  float: right;
+  shape-outside: url(left.svg);
+}
+
+.Text:last-child .Circle {
+  float: left;
+  shape-outside: url(right.svg);
+}
+
+.Texts {
+  width: 800px;
+  position: relative;
+  margin: 800px auto;
+}
+
+.Texts__content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.Text {
+  font-size: 1.5em;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.Text:last-child {
+  text-align: left;
+  color: red;
+  margin-left: 10px;
 }
