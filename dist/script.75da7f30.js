@@ -124,7 +124,7 @@ var TAU = Zdog.TAU;
 var illo = new Zdog.Illustration({
   element: ".zdog-canvas",
   dragRotate: true,
-  zoom: 3
+  zoom: 2
 });
 var outline = new Zdog.Ellipse({
   addTo: illo,
@@ -252,8 +252,8 @@ div.style.left = -9999 + "px";
 function follow(cursor) {
   var windowWidth = window.innerWidth || elem.clientWidth || body.clientWidth,
       windowHeight = window.innerHeight || elem.clientHeight || body.clientHeight;
-  var x = Math.cos(Math.PI * cursor.pageY / windowHeight) * 0.3;
-  var y = Math.cos(Math.PI * cursor.pageX / windowWidth) * 0.3;
+  var x = Math.cos(Math.PI * cursor.pageY / windowHeight) * 0.34;
+  var y = Math.cos(Math.PI * cursor.pageX / windowWidth) * 0.34;
   illo.rotate.x = x;
   illo.rotate.y = y;
   illo.updateRenderGraph();
@@ -265,15 +265,8 @@ function move(cursor) {
 }
 
 addEventListener("mousemove", follow, false);
+addEventListener("touchmove", follow, false);
 addEventListener("mousemove", move, false);
-
-function animate() {
-  // illo.rotate.x = 0;
-  illo.updateRenderGraph();
-  requestAnimationFrame(animate);
-}
-
-animate();
 illo.updateRenderGraph();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -303,7 +296,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64501" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49672" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

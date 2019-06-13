@@ -7,7 +7,7 @@ const TAU = Zdog.TAU;
 let illo = new Zdog.Illustration({
   element: ".zdog-canvas",
   dragRotate: true,
-  zoom: 3
+  zoom: 2
 });
 
 let outline = new Zdog.Ellipse({
@@ -107,8 +107,8 @@ function follow(cursor) {
   let windowWidth = window.innerWidth || elem.clientWidth || body.clientWidth,
     windowHeight = window.innerHeight || elem.clientHeight || body.clientHeight;
 
-  let x = Math.cos((Math.PI * cursor.pageY) / windowHeight) * 0.35;
-  let y = Math.cos((Math.PI * cursor.pageX) / windowWidth) * 0.35;
+  let x = Math.cos((Math.PI * cursor.pageY) / windowHeight) * 0.34;
+  let y = Math.cos((Math.PI * cursor.pageX) / windowWidth) * 0.34;
 
   illo.rotate.x = x;
   illo.rotate.y = y;

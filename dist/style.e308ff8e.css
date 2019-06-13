@@ -8,6 +8,8 @@
     url("/oi.b89deba4.ttf") format("truetype");
 }
 
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap");
+
 html,
 body {
   height: 100%;
@@ -20,12 +22,36 @@ body {
 }
 
 canvas {
-  height: 600px;
+  height: 400px;
   left: 50%;
   position: absolute;
-  top: 50%;
+  top: 200px;
   transform: translate(-50%, -50%);
-  width: 600px;
+  width: 400px;
+}
+
+main {
+  width: 800px;
+  margin: 180px auto;
+}
+
+h1 {
+  font-family: "Oi", sans-serif;
+  font-size: 4rem;
+  clear: both;
+  overflow: hidden;
+}
+
+h1 .left {
+  float: left;
+}
+
+h1 .right {
+  float: right;
+}
+
+p {
+  font-family: "IBM Plex Sans";
 }
 
 #cursor {
@@ -35,7 +61,7 @@ canvas {
   height: 20px;
   background-color: none;
   border-radius: 99px;
-  border: 18px solid #000;
+  border: 12px solid #000;
 }
 
 
