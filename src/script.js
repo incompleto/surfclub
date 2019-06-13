@@ -1,7 +1,5 @@
 // script.js
 
-import Zdog from "zdog";
-
 const TAU = Zdog.TAU;
 const white = "#fff";
 const black = "#111";
