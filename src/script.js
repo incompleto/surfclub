@@ -130,19 +130,14 @@ let $circles = document.querySelectorAll('.js-circle')
 let $title = document.querySelector('.js-title')
 let $texts = document.querySelector('.js-texts')
 
+const updateCirclePosition = () => {
 
-const updatePos = () => {
-
-  let top = $texts.getBoundingClientRect().top + window.scrollY 
-  let height = document.body.getBoundingClientRect().height
-  let y = window.scrollY  + height/2 - height/4  - top
+  let top = $texts.getBoundingClientRect().top 
+  let documentHeight = document.body.getBoundingClientRect().height
+  let y = documentHeight/2 - documentHeight/4  - top
 
   $circles[0].style.marginTop = `${y}px`;
   $circles[1].style.marginTop = `${y}px`;
-}
-
-window.onload = () => {
-  updatePos()
 }
 
 addEventListener('scroll', (e)  => {
@@ -153,6 +148,11 @@ addEventListener('scroll', (e)  => {
     $title.classList.remove('is-hidden')
   }
 
-  updatePos()
+  updateCirclePosition()
 })
+
+
+window.onload = () => {
+  updateCirclePosition()
+}
 
