@@ -101,6 +101,9 @@ const div = document.createElement("div");
 div.id = "cursor";
 body.appendChild(div);
 
+div.style.top = -9999 + "px";
+div.style.left = -9999 + "px";
+
 function animate(cursor) {
   let windowWidth = window.innerWidth || elem.clientWidth || body.clientWidth,
     windowHeight = window.innerHeight || elem.clientHeight || body.clientHeight;

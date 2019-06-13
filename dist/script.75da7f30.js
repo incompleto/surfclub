@@ -2423,6 +2423,8 @@ var elem = document.documentElement;
 var div = document.createElement("div");
 div.id = "cursor";
 body.appendChild(div);
+div.style.top = -9999 + "px";
+div.style.left = -9999 + "px";
 
 function animate(cursor) {
   var windowWidth = window.innerWidth || elem.clientWidth || body.clientWidth,
@@ -2470,7 +2472,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64222" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64311" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
