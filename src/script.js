@@ -121,14 +121,14 @@ function move(cursor) {
 }
 
 addEventListener("mousemove", follow, false);
+addEventListener("touchmove", follow, false);
 addEventListener("mousemove", move, false);
 
-function animate() {
-  // illo.rotate.x = 0;
-  illo.updateRenderGraph();
-  requestAnimationFrame(animate);
-}
-
-animate();
+// function animate() {
+//   illo.updateRenderGraph();
+//   requestAnimationFrame(animate);
+// }
+//
+// animate();
 
 illo.updateRenderGraph();
