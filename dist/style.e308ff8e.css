@@ -20,22 +20,22 @@ body {
 }
 
 canvas {
-  height: 400px;
+  height: 600px;
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
+  width: 600px;
 }
 
 #cursor {
   position: absolute;
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   background-color: none;
   border-radius: 99px;
-  border: 10px solid #000;
+  border: 18px solid #000;
 }
 
 

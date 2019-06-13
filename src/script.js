@@ -1,13 +1,13 @@
 // script.js
 
+// face
+
 const TAU = Zdog.TAU;
-const white = "#fff";
-const black = "#111";
 
 let illo = new Zdog.Illustration({
   element: ".zdog-canvas",
   dragRotate: true,
-  zoom: 2
+  zoom: 3
 });
 
 let outline = new Zdog.Ellipse({
@@ -91,18 +91,19 @@ wrinkle.copyGraph({
   rotate: { z: Zdog.TAU / 12 }
 });
 
-// ---
+// dance
 
 const body = document.getElementsByTagName("body")[0];
 const elem = document.documentElement;
 const div = document.createElement("div");
+
 div.id = "cursor";
 body.appendChild(div);
 
 div.style.top = -9999 + "px";
 div.style.left = -9999 + "px";
 
-function animate(cursor) {
+function follow(cursor) {
   let windowWidth = window.innerWidth || elem.clientWidth || body.clientWidth,
     windowHeight = window.innerHeight || elem.clientHeight || body.clientHeight;
 
@@ -119,7 +120,15 @@ function move(cursor) {
   div.style.left = cursor.pageX + "px";
 }
 
-addEventListener("mousemove", animate, false);
+addEventListener("mousemove", follow, false);
 addEventListener("mousemove", move, false);
+
+function animate() {
+  // illo.rotate.x = 0;
+  illo.updateRenderGraph();
+  requestAnimationFrame(animate);
+}
+
+animate();
 
 illo.updateRenderGraph();
