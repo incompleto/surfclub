@@ -21,7 +21,7 @@ body {
 
 body {
   position: relative;
-  padding: 800px 0;
+  padding: 700px 0 0 0;
   margin: 0;
   font-size: 1.1em;
   line-height: 135%;
@@ -45,8 +45,7 @@ canvas {
   top: 50%;
   transition: transform 500ms ease-in-out;
   transform: translate(-50%, -50%) scale(0.8);
-  width: 600px;
-  height: 600px;
+  /*border: 1px solid red;*/
 }
 
 #cursor {
@@ -89,6 +88,7 @@ canvas {
   float: right;
   shape-outside: circle(50% at 100% 50%) padding-box;
   transition: width 500ms ease-in-out, height 500ms ease-in-out;
+  /*border: 1px solid blue;*/
 }
 
 .Text:last-child .Circle {
@@ -101,6 +101,7 @@ canvas {
   position: relative;
   margin: 0 auto;
   transition: width 500ms ease-in-out;
+  padding-bottom: 500px;
 }
 
 .Texts__content {
@@ -139,21 +140,18 @@ canvas {
 @media only screen and (max-width: 710px) {
   canvas {
     transform: translate(-50%, -50%) scale(.5);
-    margin-top: -50px;
   }
   .Texts {
     width: 90%;
   }
   .Title {
     width: 90%;
-    margin-top: -50px;
   }
   .Circle {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
   }
 }
-
 
 @media only screen and (max-width: 640px) {
   canvas {

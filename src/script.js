@@ -1,5 +1,4 @@
 // script.js
-
 // face
 
 const TAU = Zdog.TAU;
@@ -126,13 +125,27 @@ addEventListener('touchmove', follow, false);
 
 illo.updateRenderGraph();
 
+let $dog = document.querySelector('.zdog-canvas')
 let $circles = document.querySelectorAll('.js-circle')
 let $title = document.querySelector('.js-title')
+let $texts = document.querySelector('.js-texts')
+
+
+const updatePos = () => {
+
+  let top = $texts.getBoundingClientRect().top + window.scrollY 
+  let height = document.body.getBoundingClientRect().height
+  let y = window.scrollY  + height/2 - height/4  - top
+
+  $circles[0].style.marginTop = `${y}px`;
+  $circles[1].style.marginTop = `${y}px`;
+}
+
+window.onload = () => {
+  updatePos()
+}
 
 addEventListener('scroll', (e)  => {
-  let height = document.body.getBoundingClientRect().height
-  let top = document.body.getBoundingClientRect().y
-  let y = window.scrollY - 580
 
   if (window.scrollY > 650 && window.scrollY < 1400) {
     $title.classList.add('is-hidden')
@@ -140,7 +153,6 @@ addEventListener('scroll', (e)  => {
     $title.classList.remove('is-hidden')
   }
 
-  $circles[0].style.marginTop = `${y}px`;
-  $circles[1].style.marginTop = `${y}px`;
+  updatePos()
 })
 
