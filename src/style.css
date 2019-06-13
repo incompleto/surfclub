@@ -8,8 +8,6 @@
     url("./fonts/oi.ttf") format("truetype");
 }
 
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap");
-
 html,
 body {
   height: 100%;
@@ -32,7 +30,13 @@ canvas {
 
 main {
   width: 800px;
-  margin: 180px auto;
+  margin: 0 auto;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 3px solid #000;
 }
 
 h1 {
@@ -40,6 +44,8 @@ h1 {
   font-size: 4rem;
   clear: both;
   overflow: hidden;
+  margin-top: 160px;
+  margin-bottom: 140px;
 }
 
 h1 .left {
@@ -50,8 +56,16 @@ h1 .right {
   float: right;
 }
 
+h2 {
+  font-family: "IBM Plex Sans";
+  font-size: 1.72rem;
+  font-weight: 700;
+}
+
 p {
   font-family: "IBM Plex Sans";
+  font-size: 1.72rem;
+  font-weight: 700;
 }
 
 #cursor {
