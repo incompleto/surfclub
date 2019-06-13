@@ -119,9 +119,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"script.js":[function(require,module,exports) {
 // script.js
+// face
 var TAU = Zdog.TAU;
-var white = "#fff";
-var black = "#111";
 var illo = new Zdog.Illustration({
   element: ".zdog-canvas",
   dragRotate: true,
@@ -131,14 +130,35 @@ var outline = new Zdog.Ellipse({
   addTo: illo,
   width: 120,
   height: 120,
-  stroke: 5,
-  color: "#000"
+  stroke: 6,
+  color: "#000",
+  quarters: 1,
+  fill: false
+});
+outline.copy({
+  rotate: {
+    z: TAU / 2
+  }
+});
+outline.copy({
+  rotate: {
+    z: TAU / 4
+  }
+});
+outline.copy({
+  rotate: {
+    z: -TAU / 4
+  }
 });
 var eyeGroup = new Zdog.Group({
   addTo: illo,
   translate: {
-    y: -15,
-    x: -16
+    y: -18,
+    x: -16,
+    z: 40
+  },
+  rotate: {
+    x: -TAU / 2.2
   }
 });
 var eye = new Zdog.Ellipse({
@@ -149,23 +169,11 @@ var eye = new Zdog.Ellipse({
   color: "#000",
   fill: true
 });
-var glitter = new Zdog.Ellipse({
-  addTo: eyeGroup,
-  width: 4,
-  height: 8,
-  stroke: 0,
-  color: "#fff",
-  fill: true,
-  translate: {
-    x: 1,
-    y: -8,
-    z: 1
-  }
-});
 eyeGroup.copyGraph({
   translate: {
-    y: -15,
-    x: 16
+    y: -18,
+    x: 16,
+    z: 40
   }
 });
 var mouth = new Zdog.Shape({
@@ -186,8 +194,12 @@ var mouth = new Zdog.Shape({
     }]
   }],
   closed: false,
-  stroke: 6,
-  color: "#000"
+  stroke: 7,
+  color: "#000",
+  translate: {
+    y: -2,
+    z: 40
+  }
 });
 var wrinkle = new Zdog.Shape({
   addTo: mouth,
@@ -208,11 +220,16 @@ var wrinkle = new Zdog.Shape({
     y: 23
   },
   rotate: {
-    z: -TAU / 12
+    z: -TAU / 13
   },
   stroke: 6,
   closed: false,
   color: "#000"
+});
+var head = new Zdog.Shape({
+  addTo: illo,
+  stroke: 110,
+  color: "#f8d946"
 });
 wrinkle.copyGraph({
   translate: {
@@ -220,9 +237,35 @@ wrinkle.copyGraph({
     y: 18
   },
   rotate: {
-    z: TAU / 12
+    z: Zdog.TAU / 12
   }
-});
+}); // dance
+
+var body = document.getElementsByTagName("body")[0];
+var elem = document.documentElement;
+var div = document.createElement("div");
+div.id = "cursor";
+body.appendChild(div);
+div.style.top = -9999 + "px";
+div.style.left = -9999 + "px";
+
+function follow(cursor) {
+  var windowWidth = window.innerWidth || elem.clientWidth || body.clientWidth,
+      windowHeight = window.innerHeight || elem.clientHeight || body.clientHeight;
+  var x = Math.cos(Math.PI * cursor.pageY / windowHeight) * 0.3;
+  var y = Math.cos(Math.PI * cursor.pageX / windowWidth) * 0.3;
+  illo.rotate.x = x;
+  illo.rotate.y = y;
+  illo.updateRenderGraph();
+}
+
+function move(cursor) {
+  div.style.top = cursor.pageY + "px";
+  div.style.left = cursor.pageX + "px";
+}
+
+addEventListener("mousemove", follow, false);
+addEventListener("mousemove", move, false);
 
 function animate() {
   // illo.rotate.x = 0;
@@ -231,6 +274,7 @@ function animate() {
 }
 
 animate();
+illo.updateRenderGraph();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -259,7 +303,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51711" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64501" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

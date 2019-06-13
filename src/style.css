@@ -1,6 +1,13 @@
 /* style.css */
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:700,900&display=swap');
+@font-face {
+  font-family: "Oi";
+  src: url("./fonts/oi.eot");
+  src: url("./fonts/oi.eot?#iefix") format("embedded-opentype"),
+  url("./fonts/oi.woff2") format("woff2"), url("fonts/oi.woff") format("woff"),
+  url("./fonts/oi.ttf") format("truetype");
+}
 
 html,
 body {
@@ -9,19 +16,18 @@ body {
 }
 
 body {
-  background: #FCFD54;
+  position: relative;
+  padding: 800px 0;
+  margin: 0;
   font-size: 1.1em;
   line-height: 135%;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  background: #f8d946;
   color: #000;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  padding-top: 800px;
-  padding-bottom: 800px;
+  cursor: none;
 }
 
 p {
@@ -30,18 +36,24 @@ p {
 }
 
 canvas {
-  cursor: grab;
-  height: 100%;
-  left: 50%;
   position: absolute;
+  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) scale(.8);
   transition: transform 500ms ease-in-out;
-  z-index: 100;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 600px;
+  height: 600px;
 }
 
-canvas:active {
-  cursor: grabbing;
+#cursor {
+  position: fixed;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-radius: 99px;
+  border: 18px solid #000;
+  z-index: 100;
 }
 
 .is-fixed {
@@ -55,7 +67,7 @@ canvas:active {
   height: 90px;
   background-image: url(/img/title.svg);
   background-size: contain;
- background-position: center center;
+  background-position: center center;
   background-repeat: no-repeat;
   left: 50%;
   top: 50%;
