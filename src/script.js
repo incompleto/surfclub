@@ -107,8 +107,8 @@ function follow(cursor) {
   let windowWidth = window.innerWidth || elem.clientWidth || body.clientWidth,
     windowHeight = window.innerHeight || elem.clientHeight || body.clientHeight;
 
-  let x = Math.cos((Math.PI * cursor.pageY) / windowHeight) * 0.3;
-  let y = Math.cos((Math.PI * cursor.pageX) / windowWidth) * 0.3;
+  let x = Math.cos((Math.PI * cursor.pageY) / windowHeight) * 0.35;
+  let y = Math.cos((Math.PI * cursor.pageX) / windowWidth) * 0.35;
 
   illo.rotate.x = x;
   illo.rotate.y = y;
@@ -123,12 +123,5 @@ function move(cursor) {
 addEventListener("mousemove", follow, false);
 addEventListener("touchmove", follow, false);
 addEventListener("mousemove", move, false);
-
-// function animate() {
-//   illo.updateRenderGraph();
-//   requestAnimationFrame(animate);
-// }
-//
-// animate();
 
 illo.updateRenderGraph();
