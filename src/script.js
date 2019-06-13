@@ -129,7 +129,7 @@ illo.updateRenderGraph();
 let $circles = document.querySelectorAll('.js-circle')
 let $title = document.querySelector('.js-title')
 
-window.addEventListener('scroll', (e)  => {
+addEventListener('scroll', (e)  => {
   let height = document.body.getBoundingClientRect().height
   let top = document.body.getBoundingClientRect().y
   let y = window.scrollY - 580
