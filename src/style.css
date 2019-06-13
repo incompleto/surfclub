@@ -9,6 +9,10 @@
   url("./fonts/oi.ttf") format("truetype");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -32,7 +36,7 @@ body {
 
 p {
   padding: 0;
-  margin: 0 0 36px;
+  margin: 0 0 36px 0;
 }
 
 canvas {
@@ -95,7 +99,7 @@ canvas {
 .Texts {
   width: 900px;
   position: relative;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   transition: width 500ms ease-in-out;
 }
 
@@ -112,6 +116,7 @@ canvas {
   font-size: 1.2em;
   text-align: right;
   margin-right: 10px;
+  line-height: 135%;
 }
 .Text:last-child {
   text-align: left;
@@ -120,7 +125,6 @@ canvas {
 .Text strong {
   font-weight: 900;
 }
-
 
 @media only screen and (max-width: 1000px) {
   canvas {
@@ -149,3 +153,33 @@ canvas {
     height: 250px;
   }
 }
+
+
+@media only screen and (max-width: 640px) {
+  canvas {
+    transform: translate(-50%, -50%) scale(.3);
+  }
+  .Texts__content {
+    display: block;
+  }
+  .Circle {
+    display: none;
+  }
+  .Texts {
+    width: 100%;
+    padding: 0 40px;
+  }
+  .Text {
+    width: 100%;
+    text-align: left;
+    margin: 0 auto 32px auto;
+  }
+  .Text:last-child {
+    margin: auto;
+  }
+  .Title {
+    width: 85%;
+  }
+}
+
+
