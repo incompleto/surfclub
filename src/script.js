@@ -141,18 +141,31 @@ const updateCirclePosition = () => {
 }
 
 addEventListener('scroll', (e)  => {
-
-  if (window.scrollY > 650 && window.scrollY < 1400) {
-    $title.classList.add('is-hidden')
-  } else {
-    $title.classList.remove('is-hidden')
-  }
-
   updateCirclePosition()
 })
 
 
 window.onload = () => {
+  var options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: [0.2]
+  }
+
+  let observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      let r = Math.floor(entry.intersectionRatio * 100)
+
+      if (r >= 20) {
+        $title.classList.add('is-hidden')
+      } else {
+        $title.classList.remove('is-hidden')
+      }
+    })
+  }, options);
+
+  observer.observe(document.querySelector('.js-text'))
+
   updateCirclePosition()
 }
 
