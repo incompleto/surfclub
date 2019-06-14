@@ -27,9 +27,9 @@ body {
   font-size: 1.1em;
   line-height: 135%;
   font-weight: normal;
-  /* -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility; */
+  text-rendering: optimizeLegibility;
   background: #f8d946;
   color: #000;
 }
@@ -41,7 +41,7 @@ a {
 h1 {
   font-family: "Oi", sans-serif;
   font-size: 5rem;
-  font-weight: 500;
+  font-weight: normal;
 }
 
 p {
@@ -118,10 +118,10 @@ canvas {
 
 @media only screen and (max-width: 800px) {
   body {
-    padding: 350px 0 0 0;
+    padding: 50px 0 0 0;
   }
   canvas {
-    transform: translate(-50%, -75%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.5);
   }
   .Texts__content {
     display: block;
