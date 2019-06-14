@@ -92,7 +92,7 @@ wrinkle.copyGraph({
 
 // dance
 
-const body = document.getElementsByTagName('body')[0];
+const body = document.getElementsByTagName("body")[0];
 const elem = document.documentElement;
 
 function follow(cursor) {
@@ -107,53 +107,44 @@ function follow(cursor) {
   illo.updateRenderGraph();
 }
 
-addEventListener('mousemove', follow, false);
-addEventListener('touchmove', follow, false);
+addEventListener("mousemove", follow, false);
+addEventListener("touchmove", follow, false);
 
 illo.updateRenderGraph();
 
-let $dog = document.querySelector('.zdog-canvas')
-let $circles = document.querySelectorAll('.js-circle')
-let $title = document.querySelector('.js-title')
-let $texts = document.querySelector('.js-texts')
+let $dog = document.querySelector(".zdog-canvas");
+let $circles = document.querySelectorAll(".js-circle");
+let $texts = document.querySelector(".js-texts");
 
 const updateCirclePosition = () => {
-
-  let top = $texts.getBoundingClientRect().top 
-  let documentHeight = document.body.getBoundingClientRect().height
-  let circleHeight = $circles[0].getBoundingClientRect().height
-  let height = documentHeight/2 - circleHeight/2
-  let y = height - top
+  let top = $texts.getBoundingClientRect().top;
+  let documentHeight = document.body.getBoundingClientRect().height;
+  let circleHeight = $circles[0].getBoundingClientRect().height;
+  let height = documentHeight / 2 - circleHeight / 2;
+  let y = height - top;
 
   $circles[0].style.marginTop = `${y}px`;
   $circles[1].style.marginTop = `${y}px`;
-}
+};
 
-addEventListener('scroll', (e)  => {
-  updateCirclePosition()
-})
+addEventListener("scroll", e => {
+  updateCirclePosition();
+});
 
 window.onload = () => {
   var options = {
     root: null,
     rootMargin: "0px",
     threshold: [0.2]
-  }
+  };
 
-  let observer = new IntersectionObserver((entries) => {
+  let observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      let r = Math.floor(entry.intersectionRatio * 100)
-
-      if (r >= 20) {
-        $title.classList.add('is-hidden')
-      } else {
-        $title.classList.remove('is-hidden')
-      }
-    })
+      let r = Math.floor(entry.intersectionRatio * 100);
+    });
   }, options);
 
-  observer.observe(document.querySelector('.js-text'))
+  observer.observe(document.querySelector(".js-text"));
 
-  updateCirclePosition()
-}
-
+  updateCirclePosition();
+};

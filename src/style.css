@@ -1,12 +1,13 @@
 /* style.css */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:700,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:500,700&display=swap");
+
 @font-face {
   font-family: "Oi";
   src: url("./fonts/oi.eot");
   src: url("./fonts/oi.eot?#iefix") format("embedded-opentype"),
-  url("./fonts/oi.woff2") format("woff2"), url("fonts/oi.woff") format("woff"),
-  url("./fonts/oi.ttf") format("truetype");
+    url("./fonts/oi.woff2") format("woff2"), url("fonts/oi.woff") format("woff"),
+    url("./fonts/oi.ttf") format("truetype");
 }
 
 * {
@@ -36,6 +37,12 @@ body {
 a {
   color: #000;
 }
+
+h1 {
+  font-family: "Oi", sans-serif;
+  font-size: 5rem;
+}
+
 p {
   padding: 0;
   margin: 0 0 36px 0;
@@ -104,16 +111,17 @@ canvas {
 }
 
 .Text {
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-weight: 700;
-  font-size: 1.2em;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.3em;
   text-align: right;
-  margin-right: 10px;
-  line-height: 135%;
+  margin-right: 0px;
+  line-height: 130%;
+  padding-bottom: 40px;
 }
 .Text:last-child {
   text-align: left;
-  margin-left: 10px;
+  margin-left: 60px;
 }
 .Text strong {
   font-weight: 900;
@@ -121,7 +129,7 @@ canvas {
 
 @media only screen and (max-width: 1000px) {
   canvas {
-    transform: translate(-50%, -50%) scale(.7);
+    transform: translate(-50%, -50%) scale(0.7);
   }
   .Texts,
   .Title {
@@ -131,7 +139,7 @@ canvas {
 
 @media only screen and (max-width: 710px) {
   canvas {
-    transform: translate(-50%, -50%) scale(.5);
+    transform: translate(-50%, -50%) scale(0.5);
   }
   .Texts,
   .Title {
@@ -145,7 +153,7 @@ canvas {
 
 @media only screen and (max-width: 640px) {
   canvas {
-    transform: translate(-50%, -50%) scale(.3);
+    transform: translate(-50%, -50%) scale(0.75);
   }
   .Texts__content {
     display: block;
@@ -169,5 +177,3 @@ canvas {
     width: 85%;
   }
 }
-
-
