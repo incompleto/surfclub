@@ -115,31 +115,12 @@ canvas {
   font-weight: 900;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
+  body {
+    padding: 350px 0 0 0;
+  }
   canvas {
-    transform: translate(-50%, -50%) scale(0.7);
-  }
-  .Texts {
-    width: 90%;
-  }
-}
-
-@media only screen and (max-width: 710px) {
-  canvas {
-    transform: translate(-50%, -50%) scale(0.5);
-  }
-  .Texts {
-    width: 90%;
-  }
-  .Circle {
-    width: 350px;
-    height: 350px;
-  }
-}
-
-@media only screen and (max-width: 640px) {
-  canvas {
-    transform: translate(-50%, -50%) scale(0.75);
+    transform: translate(-50%, -100%) scale(0.5);
   }
   .Texts__content {
     display: block;

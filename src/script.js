@@ -108,6 +108,7 @@ function follow(cursor) {
 }
 
 addEventListener("mousemove", follow, false);
+addEventListener("touchstart", follow, false);
 addEventListener("touchmove", follow, false);
 
 illo.updateRenderGraph();
