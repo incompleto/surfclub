@@ -91,15 +91,15 @@ canvas {
 
 .Text:last-child .Circle {
   float: left;
-  shape-outside: circle(50% at 0 50%) padding-box;
+  shape-outside: circle(50% at 0px 50%) padding-box;
 }
 
 .Texts {
-  width: 900px;
+  width: 400px;
   position: relative;
+  padding-bottom: 300px;
   margin: 0 auto;
   transition: width 500ms ease-in-out;
-  padding-bottom: 300px;
 }
 
 .Texts__content {
@@ -139,9 +139,7 @@ canvas {
   canvas {
     transform: translate(-50%, -50%) scale(.5);
   }
-  .Texts {
-    width: 90%;
-  }
+  .Texts,
   .Title {
     width: 90%;
   }
