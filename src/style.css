@@ -22,7 +22,7 @@ body {
 body {
   position: relative;
   padding: 700px 0 0 0;
-  margin: 0;
+  margin: auto;
   font-size: 1.1em;
   line-height: 135%;
   font-weight: normal;
@@ -45,6 +45,7 @@ canvas {
   top: 50%;
   transition: transform 500ms ease-in-out;
   transform: translate(-50%, -50%) scale(0.8);
+  border: 1px solid blue;
 }
 
 #cursor {
@@ -87,6 +88,7 @@ canvas {
   float: right;
   shape-outside: circle(50% at 100% 50%) padding-box;
   transition: width 500ms ease-in-out, height 500ms ease-in-out;
+  border: 1px solid red;
 }
 
 .Text:last-child .Circle {
@@ -99,6 +101,7 @@ canvas {
   position: relative;
   margin: 0 auto;
   transition: width 500ms ease-in-out;
+  padding-bottom: 300px;
 }
 
 .Texts__content {
