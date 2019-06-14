@@ -121,7 +121,7 @@ canvas {
     padding: 0;
   }
   canvas {
-    transform: translate(-50%, -50%) scale(0.4);
+    transform: translate(-50%, -80%) scale(0.6);
   }
   .Texts__content {
     display: block;
