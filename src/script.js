@@ -134,7 +134,9 @@ const updateCirclePosition = () => {
 
   let top = $texts.getBoundingClientRect().top 
   let documentHeight = document.body.getBoundingClientRect().height
-  let y = documentHeight/2 - documentHeight/4  - top
+  let circleHeight = $circles[0].getBoundingClientRect().height
+  let height = documentHeight/2 - circleHeight/2
+  let y = height - top
 
   $circles[0].style.marginTop = `${y}px`;
   $circles[1].style.marginTop = `${y}px`;
@@ -143,7 +145,6 @@ const updateCirclePosition = () => {
 addEventListener('scroll', (e)  => {
   updateCirclePosition()
 })
-
 
 window.onload = () => {
   var options = {
