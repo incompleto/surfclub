@@ -94,10 +94,6 @@ wrinkle.copyGraph({
 
 const body = document.getElementsByTagName('body')[0];
 const elem = document.documentElement;
-const div = document.createElement('div');
-
-div.id = 'cursor';
-body.appendChild(div);
 
 function follow(cursor) {
   let windowWidth = window.innerWidth || elem.clientWidth || body.clientWidth,
@@ -111,12 +107,6 @@ function follow(cursor) {
   illo.updateRenderGraph();
 }
 
-function move(cursor) {
-  div.style.top = `${cursor.screenY}px`
-  div.style.left = `${cursor.screenX}px`
-}
-
-addEventListener('mousemove', move, false);
 addEventListener('mousemove', follow, false);
 addEventListener('touchmove', follow, false);
 

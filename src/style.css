@@ -31,7 +31,6 @@ body {
   text-rendering: optimizeLegibility;
   background: #f8d946;
   color: #000;
-  cursor: none;
 }
 
 a {
@@ -40,6 +39,7 @@ a {
 p {
   padding: 0;
   margin: 0 0 36px 0;
+  cursor: default;
 }
 
 canvas {
@@ -49,17 +49,6 @@ canvas {
   transition: transform 500ms ease-in-out;
   transform: translate(-50%, -50%) scale(0.8);
   pointer-events: none;
-}
-
-#cursor {
-  position: fixed;
-  display: block;
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  border-radius: 99px;
-  border: 18px solid #000;
-  z-index: 100;
 }
 
 .is-fixed {
