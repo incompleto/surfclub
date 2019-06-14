@@ -42,6 +42,7 @@ h1 {
   font-family: "Oi", sans-serif;
   font-size: 4rem;
   font-weight: normal;
+  line-height: 100%;
 }
 
 p {
@@ -52,10 +53,6 @@ p {
 
 canvas {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transition: transform 500ms ease-in-out;
-  transform: translate(-50%, -50%) scale(0.8);
   pointer-events: none;
 }
 
@@ -68,6 +65,7 @@ canvas {
 .is-hidden {
   opacity: 0;
 }
+
 .Circle {
   position: relative;
   width: 350px;
@@ -87,7 +85,7 @@ canvas {
 .Texts {
   width: 400px;
   position: relative;
-  padding-bottom: 300px;
+  padding-bottom: 400px;
   margin: 0 auto;
   transition: width 500ms ease-in-out;
 }
@@ -116,16 +114,32 @@ canvas {
   font-weight: 900;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 799px) {
   body {
-    padding: 0;
+    padding: 200px 0 0 0;
   }
   canvas {
-    transform: translate(-50%, -80%) scale(0.6);
+    top: -180px !important;
+    left: -180px !important;
+    transform: scale(0.4);
   }
+
   .Texts__content {
     display: block;
   }
+
+  .Text > .Title {
+    font-size: 2.6em;
+  }
+
+  .Text:first-child > .Title:after {
+    content: " Club";
+  }
+
+  .Text:last-child > .Title:before {
+    content: "Surf ";
+  }
+
   .Circle {
     display: none;
   }
@@ -140,5 +154,14 @@ canvas {
   }
   .Text:last-child {
     margin: auto;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  canvas {
+    left: 50%;
+    top: 50%;
+    transition: transform 500ms ease-in-out;
+    transform: translate(-50%, -50%) scale(0.8);
   }
 }
