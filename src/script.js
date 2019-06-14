@@ -92,15 +92,12 @@ wrinkle.copyGraph({
 
 // dance
 
-const body = document.getElementsByTagName("body")[0];
+const body = document.getElementsByTagName('body')[0];
 const elem = document.documentElement;
-const div = document.createElement("div");
+const div = document.createElement('div');
 
-div.id = "cursor";
+div.id = 'cursor';
 body.appendChild(div);
-
-div.style.top = -9999 + "px";
-div.style.left = -9999 + "px";
 
 function follow(cursor) {
   let windowWidth = window.innerWidth || elem.clientWidth || body.clientWidth,

@@ -34,6 +34,9 @@ body {
   cursor: none;
 }
 
+a {
+  color: #000;
+}
 p {
   padding: 0;
   margin: 0 0 36px 0;
@@ -45,6 +48,7 @@ canvas {
   top: 50%;
   transition: transform 500ms ease-in-out;
   transform: translate(-50%, -50%) scale(0.8);
+  pointer-events: none;
 }
 
 #cursor {
@@ -87,6 +91,7 @@ canvas {
   float: right;
   shape-outside: circle(50% at 100% 50%) padding-box;
   transition: width 500ms ease-in-out, height 500ms ease-in-out;
+  pointer-events: none;
 }
 
 .Text:last-child .Circle {
