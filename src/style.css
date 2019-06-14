@@ -64,18 +64,6 @@ canvas {
   left: 50%;
 }
 
-.Title {
-  width: 1000px;
-  height: 90px;
-  background-image: url(/img/title.svg);
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity 500ms ease-in-out, width 500ms ease-in-out;
-}
 .is-hidden {
   opacity: 0;
 }
@@ -131,8 +119,7 @@ canvas {
   canvas {
     transform: translate(-50%, -50%) scale(0.7);
   }
-  .Texts,
-  .Title {
+  .Texts {
     width: 90%;
   }
 }
@@ -141,8 +128,7 @@ canvas {
   canvas {
     transform: translate(-50%, -50%) scale(0.5);
   }
-  .Texts,
-  .Title {
+  .Texts {
     width: 90%;
   }
   .Circle {
@@ -172,8 +158,5 @@ canvas {
   }
   .Text:last-child {
     margin: auto;
-  }
-  .Title {
-    width: 85%;
   }
 }
