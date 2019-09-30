@@ -6,7 +6,7 @@
   "main": "src/index.html",
   "scripts": {
     "start": "parcel src/*.html --open",
-    "build": "PARCEL_WORKERS=1 parcel build src/*.html"
+    "build": "PARCEL_WORKERS=1 NODE_ENV=production parcel build src/*.html"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.3"
